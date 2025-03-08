@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Gustavo Leopoldes">
+    <meta name="author" content="Gustavo Leopoldes">
+    <title>WDD 131 – Dynamic Web Fundamentals - Gustavo Leopoldes</title>
+    <link rel="stylesheet" href="styles/base.css"> 
+    <script src="scripts/getdates.js" defer></script>  
 </head>
 <body>
-    <h1>WDD 131 - Gustavo</h1>
+    <header>
+        <h1>WDD 131 – Dynamic Web Fundamentals</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Course</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About me</h2>
+            <p>Hello! I'm Gustavo Leopoldes, a student passionate about programming, music and sports. I'm constantly looking to learn more and share my knowledge with the world. Here you can follow my projects and my adventures in the world of technology.</p>
+        </section>
+
+        <section class="card">
+            <h2>Scripture</h2>
+            <img src="images/liahona.jpg" alt="Image Example 1">
+            <p>Mosiah 3:19 For the natural man is an enemy to God, and has been from the fall of Adam, and will be, forever and ever, unless he yields to the enticings of the Holy Spirit, and putteth off the natural man and becometh a saint through the atonement of Christ the Lord, and becometh as a child, submissive, meek, humble, patient, full of love, willing to submit to all things which the Lord seeth fit to inflict upon him, even as a child doth submit to his father.</p>
+        </section>
+        <section class="card">
+            <h2>Curiosities</h2>
+            <img src="images/eu.jpg" alt="Image Example 2">
+            <p>Some interesting facts: besides technology, I love sports and fashion. I'm always taking advantage of new trends on and off the field, and I also love nature..</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Gustavo Leopoldes - Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
