@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florianópolis</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Florianópolis</h1>
+    </header>
+    
+    <main>
+        <picture>
+            <source srcset="images/hero-large-1.webp" media="(min-width: 960px)">
+            <source srcset="images/hero-medium1.webp" media="(min-width: 400px)">
+            <img src="images/hero-small-2.webp" alt="Vista aérea de Florianópolis" width="1500" height="750">
+        </picture>
+
+        <div class="content-wrapper">
+            <section class="data">
+                <h2>Data</h2>
+                <p><span>Area:</span> 675.409 km²</p>
+                <p><span>Population:</span> 516,524</p>
+                <p><span>Capital:</span> State of Santa<br>Catarina</p>
+                <p><span>Language:</span> Portuguese</p>
+                <p><span>Time Zone:</span> UTC-3</p>
+                <p><span>Calling Code:</span> +55 48</p>
+            </section>
+
+            <section class="weather">
+                <h2>Weather ⛅</h2>
+                <p><span>Temperature:</span> 20°C</p>
+                <p><span>Conditions:</span> Cloudy</p>
+                <p><span>Wind:</span> 3 km/h</p>
+                <p><span>Wind Chill:</span> <span id="windChill">N/A</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>©2024 🌺 Gustavo Leopoldes 🌺 Florianópolis</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
