@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <main>
+        <h1>Thank You for Your Review!</h1>
+        <div style="background-color: var(--form-bg); padding: 20px; margin: 20px; border-radius: 8px; text-align: center;">
+            <p style="font-size: 1.2em;">Total reviews submitted: <span id="reviewCount">0</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>©2024 🌺 Gustavo Leopoldes 🌺</p>
+        <p>Florianópolis</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        const count = localStorage.getItem('reviewCount') || '0';
+        document.getElementById('reviewCount').textContent = count;
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
