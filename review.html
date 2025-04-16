@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Submitted</title>
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="confirmation.js" defer></script>
 </head>
 <body>
-    <main>
+    <header>
         <h1>Thank You for Your Review!</h1>
-        <div style="background-color: var(--form-bg); padding: 20px; margin: 20px; border-radius: 8px; text-align: center;">
-            <p style="font-size: 1.2em;">Total reviews submitted: <span id="reviewCount">0</span></p>
+    </header>
+    
+    <main>
+        <div class="confirmation-container">
+            <h2>Your review has been submitted successfully.</h2>
+            <p>We appreciate your feedback on our products.</p>
+            
+            <div class="review-details">
+                <h3>Review Details:</h3>
+                <div id="review-content"></div>
+            </div>
+            
+            <p class="review-count">You have submitted <span id="review-counter">0</span> reviews.</p>
+            
+            <a href="form.html" class="back-btn">Submit Another Review</a>
         </div>
     </main>
-
+    
     <footer>
-        <p>©2024 🌺 Gustavo Leopoldes 🌺</p>
+        <p>&copy;2024 🌸 Gustavo Leopoldes 🌸</p>
         <p>Florianópolis</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-
-    <script>
-        const count = localStorage.getItem('reviewCount') || '0';
-        document.getElementById('reviewCount').textContent = count;
-        document.getElementById('lastModified').textContent = new Date().toLocaleString();
-    </script>
 </body>
 </html>
