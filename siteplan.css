@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,11 +36,17 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
   font-size: 48px;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 nav {
@@ -54,6 +59,8 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav li {
@@ -64,18 +71,36 @@ nav li {
 nav a {
   color: #fff;
   text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   color: #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
 }
 
+nav ul li.active a {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main p {
+  margin-bottom: 15px;
+  text-align: justify;
+  max-width: 800px;
 }
 
 footer {
@@ -84,15 +109,23 @@ footer {
   padding: 10px;
   text-align: center;
   clear: both;
+  margin-top: 30px;
 }
 
 form {
   margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 label {
   display: block;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 input, textarea {
@@ -100,6 +133,14 @@ input, textarea {
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00698f;
+  box-shadow: 0 0 5px rgba(0, 105, 143, 0.3);
 }
 
 input[type="submit"] {
@@ -109,15 +150,205 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 input[type="submit"]:hover {
   background-color: #003d5c;
 }
 
+main button {
+  background-color: #00698f;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main button:hover {
+  background-color: #004c6d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00698f;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #004c6d;
+  transform: translateY(-3px);
+}
+
+.beach-recommendation {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.beach-recommendation .beach-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00698f;
+  margin: 15px 0;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+#messages-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.message:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+section h3 {
+  border-bottom: 2px solid #00698f;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+section ul {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 5px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info a {
+  color: #00698f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #004c6d;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 768px) {
   main {
     flex-direction: column;
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 5px 0;
+  }
+  
+  .beach-recommendation {
+    padding: 15px;
+  }
+  
+  .beach-recommendation .beach-name {
+    font-size: 20px;
   }
 }
 
@@ -125,13 +356,40 @@ input[type="submit"]:hover {
   header {
     padding: 10px;
   }
+  
+  header h1 {
+    font-size: 28px;
+  }
+  
   nav {
     padding: 5px;
   }
+  
   main {
     padding: 10px;
   }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
   footer {
     padding: 5px;
+  }
+  
+  form {
+    padding: 15px;
+  }
+  
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
   }
 }
